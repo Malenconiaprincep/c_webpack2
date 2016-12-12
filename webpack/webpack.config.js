@@ -1,7 +1,25 @@
+const webpack = require('webpack');
+const path = require('path')
+
 module.exports = {
-  entry: __dirname + '/../src/client/index.js',
+  /*
+   *    The base directory, an absolute path, for resolving entry points and loaders from configuration.
+   */
+  context: path.resolve(__dirname, ".."),
+  entry: './src/client/index.js',
   output: {
     filename: 'bundle.js',
-    path: '../asset'
+    path: './asset'
+  },
+  module: {
+    rules: [
+      {
+          test: /\.(js|jsx)$/,
+          use: [{
+            loader: 'babel-loader',
+            options: { presets: ["es2015"] }
+          }]
+      }
+    ]
   }
 }

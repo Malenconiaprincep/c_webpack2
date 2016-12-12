@@ -1,5 +1,1 @@
-import _ from 'lodash';
-
-var a = [1,2,3,4,1];
-
-console.log(_.uniq(a))
+[1,2,3].map(n => n + 1);
