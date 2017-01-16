@@ -1,1 +1,3 @@
-[1,2,3].map(n => n + 1);
+import React from 'react'
+import { render } from 'react-dom'
+import { Provider } from 'react-redux'
