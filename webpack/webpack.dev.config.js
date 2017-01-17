@@ -5,6 +5,7 @@ module.exports = {
   /*
    *    The base directory, an absolute path, for resolving entry points and loaders from configuration.
    */
+  devtool: 'inline-source-map',
   context: path.resolve(__dirname, ".."),
   entry: './src/client/index.js',
   output: {
@@ -15,9 +16,14 @@ module.exports = {
     rules: [
       {
           test: /\.(js|jsx)$/,
+          exclude: /(node_modules|bower_components)/,
           use: [{
             loader: 'babel-loader',
-            options: { presets: ["es2015"] }
+            options: {
+                        "presets": [
+                          [ "es2015", { "modules": false } ]
+                        ]
+                     }
           }]
       }
     ]

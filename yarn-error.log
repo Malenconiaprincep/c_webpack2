@@ -1,0 +1,60 @@
+Arguments: 
+  /usr/local/bin/node /usr/local/bin/yarn add webpack
+
+PATH: 
+  /usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/mysql/bin
+
+Yarn version: 
+  0.16.1
+
+Node version: 
+  6.2.2
+
+Platform: 
+  darwin x64
+
+npm manifest: 
+  {
+    "name": "family-boilerplate",
+    "version": "0.0.1",
+    "description": "react + redux + webpack2 + nodejs",
+    "main": "index.js",
+    "scripts": {
+      "version": "webpack --version",
+      "build": "webpack --config ./webpack/webpack.config.js",
+      "start": "node ./src/server/index"
+    },
+    "author": "makuta",
+    "license": "ISC",
+    "devDependencies": {
+      // "babel-loader": "^6.2.9",
+      // "babel-polyfill": "^6.20.0",
+      "react": "^15.4.2",
+      // "react-dom": "^15.4.2",
+      // "react-redux": "^5.0.2",
+      "webpack": "2.2.0-rc.6"
+    },
+    "dependencies": {}
+  }
+
+yarn manifest: 
+  No manifest
+
+bower manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
+
+Trace: 
+  SyntaxError: /Users/user/Documents/workspace/bemcloud/webpack2/package.json: Unexpected token / in JSON at position 357
+      at Object.parse (native)
+      at /usr/local/lib/node_modules/yarn/lib/util/fs.js:271:57
+      at next (native)
+      at step (/usr/local/lib/node_modules/yarn/node_modules/babel-runtime/helpers/asyncToGenerator.js:17:30)
+      at /usr/local/lib/node_modules/yarn/node_modules/babel-runtime/helpers/asyncToGenerator.js:28:13
+      at run (/usr/local/lib/node_modules/yarn/node_modules/core-js/library/modules/es6.promise.js:87:22)
+      at /usr/local/lib/node_modules/yarn/node_modules/core-js/library/modules/es6.promise.js:100:28
+      at flush (/usr/local/lib/node_modules/yarn/node_modules/core-js/library/modules/_microtask.js:18:9)
+      at _combinedTickCallback (internal/process/next_tick.js:67:7)
+      at process._tickCallback (internal/process/next_tick.js:98:9)
